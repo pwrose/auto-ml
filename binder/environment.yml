@@ -3,6 +3,3 @@ name: auto-ml
 dependencies:
   - python>=3.6
   - numpy
-  - swig
-  - pip:
-    - auto-sklearn==0.5.0
