@@ -1,7 +1,4 @@
 name: auto-ml 
 
 dependencies:
-  - python>=3.6
-  - tornado<=6.0
-  - pip:
-    - auto-sklearn=0.5.0
+  - python==3.6
