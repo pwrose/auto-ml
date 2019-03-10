@@ -2,6 +2,7 @@ name: auto-ml
 
 dependencies:
   - python==3.6
+  - cython
   - gxx_linux-64
   - gcc_linux-64
   - numpy==1.16
