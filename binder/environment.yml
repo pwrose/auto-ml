@@ -3,3 +3,4 @@ name: auto-ml
 dependencies:
   - python>=3.6
   - numpy
+  - tornado <=6.0
