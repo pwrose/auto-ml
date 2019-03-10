@@ -4,7 +4,9 @@ dependencies:
   - python==3.6
   - gxx_linux-64
   - gcc_linux-64
-  - numpy
+  - numpy==1.16
+  - scipy>=0.14.1
+  - scikit-learn>=0.19,<0.20
   - swig
   - pip:
     - auto-sklearn==0.5.0
