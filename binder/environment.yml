@@ -5,9 +5,13 @@ dependencies:
   - cython
   - gxx_linux-64
   - gcc_linux-64
+  - ipywidgets
+  - matplotlib
   - numpy==1.16
+  - pandas
   - scipy>=0.14.1
   - scikit-learn>=0.19,<0.20
+  - seaborn
   - swig
   - pip:
     - auto-sklearn==0.4.0
