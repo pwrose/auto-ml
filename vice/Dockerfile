@@ -1,13 +1,11 @@
 FROM discoenv/jupyter-lab:beta
 
-FROM mfeurer/auto-sklearn
-
 USER root
 
 # Update the packages
 RUN apt-get update \
     && apt-get clean \
-    && apt-get intall swig \
+    && apt-get install swig \
     && rm -rf /usr/lib/apt/lists/*
 
 USER jovyan
