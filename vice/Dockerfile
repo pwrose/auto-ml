@@ -5,17 +5,19 @@ USER root
 # Update the packages and install swig
 RUN apt-get update \
     && apt-get clean \
-    && apt-get install -y swig \
+    && apt-get install -y build-essential swig \
     && rm -rf /usr/lib/apt/lists/*
 
 USER jovyan
 
-# Install auto-sklearn dependencies
-RUN conda install cython gxx_linux-64 gcc_linux-64 \
-          && matplotlib numpy==1.16 pandas seaborn \
-          && scipy>=0.14.1 && scikit-learn>=0.19,<0.20 xgboost>=0.80 -y
+# Download auto-sklearn dependencies
+RUN curl -O https://raw.githubusercontent.com/automl/auto-sklearn/master/requirements.txt
+RUN mv requirements.txt  /tmp
 
-RUN pip install auto-sklearn==0.4.0 ipywidgets
+# Install auto-sklearn dependencies
+RUN pip install -r /tmp/requirements.txt
+
+RUN pip install auto-sklearn
 
 WORKDIR /home/jovyan
 
