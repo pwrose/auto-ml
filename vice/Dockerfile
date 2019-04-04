@@ -5,7 +5,7 @@ USER root
 # Update the packages
 RUN apt-get update \
     && apt-get clean \
-    && apt-get install swig \
+    && apt-get install -y swig \
     && rm -rf /usr/lib/apt/lists/*
 
 USER jovyan
